@@ -9,19 +9,7 @@ function mapFunc()
 
 function reduceFunc(key, value)
 {
-    function calcSum(array)
-    {
-        var sum = 0;
-        for(var idx = 0; idx < array.length; idx++)
-        {
-            var item = array[idx];
-            if(!isNaN(parseFloat(item)) && isFinite(item))
-            {
-                sum = sum + item;    
-            }
-        }
-        return sum;    
-    }
-    return calcSum(value);
+    var array = value.filter(x => !isNaN(x));
+    return Array.sum(array)
 }
 db.people.mapReduce(mapFunc, reduceFunc, { out : 'balance_sum' })

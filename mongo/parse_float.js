@@ -4,8 +4,20 @@ db.people.find().forEach(function(data) {
     var updoc = {
         "$set": {}
     };
-    updoc["$set"]["heightFloat"] = parseFloat(data.height);
-    updoc["$set"]["weightFloat"] = parseFloat(data.weight);
+    if(parseFloat(data.height) > 0)
+        updoc["$set"]["heightFloat"] = parseFloat(data.height);
+    
+    if(parseFloat(data.weight) > 0)
+        updoc["$set"]["weightFloat"] = parseFloat(data.weight);
+    if(data.credit){
+        var credit = data.credit;
+        
+        for(var i = 0; i < credit.length; i++)
+        {
+            credit[i]["balanceFloat"] = parseFloat(credit[i].balance);
+        }
+        updoc["$set"]["credit"] = credit;
+    }
     // queue the update
     bulk.find({
         "_id": data._id
