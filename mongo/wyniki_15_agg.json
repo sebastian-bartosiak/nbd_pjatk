@@ -1,577 +1,116 @@
 MongoDB shell version v3.6.4
 connecting to: mongodb://127.0.0.1:27017/nbd
 MongoDB server version: 3.6.4
+{ "_id" : "MYR", "avgBalance" : 4781.12, "sumBalance" : 4781.12 }
+{ "_id" : "ALL", "avgBalance" : 3325.48, "sumBalance" : 3325.48 }
+{ "_id" : "MAD", "avgBalance" : 3818.85, "sumBalance" : 3818.85 }
+{ "_id" : "LYD", "avgBalance" : 4382.495, "sumBalance" : 8764.99 }
+{ "_id" : "XPF", "avgBalance" : 4759.07, "sumBalance" : 4759.07 }
+{ "_id" : "BYR", "avgBalance" : 5095.79, "sumBalance" : 5095.79 }
+{ "_id" : "IQD", "avgBalance" : 4269.39, "sumBalance" : 4269.39 }
+{ "_id" : "RSD", "avgBalance" : 4276.56, "sumBalance" : 4276.56 }
+{ "_id" : "MMK", "avgBalance" : 4629.42, "sumBalance" : 4629.42 }
+{ "_id" : "KRW", "avgBalance" : 6689.91, "sumBalance" : 13379.82 }
+{ "_id" : "TJS", "avgBalance" : 4087.71, "sumBalance" : 4087.71 }
+{ "_id" : "RWF", "avgBalance" : 4632.88, "sumBalance" : 4632.88 }
+{ "_id" : "BWP", "avgBalance" : 4076.29, "sumBalance" : 4076.29 }
+{ "_id" : "CLP", "avgBalance" : 5252.2375, "sumBalance" : 21008.95 }
+{ "_id" : "ILS", "avgBalance" : 5431.83, "sumBalance" : 16295.49 }
+{ "_id" : "UZS", "avgBalance" : 3573.03, "sumBalance" : 3573.03 }
+{ "_id" : "KZT", "avgBalance" : 3788.95, "sumBalance" : 3788.95 }
+{ "_id" : "NZD", "avgBalance" : 5328.46, "sumBalance" : 5328.46 }
+{ "_id" : "KYD", "avgBalance" : 3760.89, "sumBalance" : 3760.89 }
+{ "_id" : "PKR", "avgBalance" : 4734.5, "sumBalance" : 18938 }
+{ "_id" : "HRK", "avgBalance" : 4870.964, "sumBalance" : 24354.82 }
+{ "_id" : "ZAR", "avgBalance" : 3930.306666666667, "sumBalance" : 11790.92 }
+{ "_id" : "CUP", "avgBalance" : 5005.78, "sumBalance" : 15017.34 }
+{ "_id" : "PLN", "avgBalance" : 5042.821111111111, "sumBalance" : 90770.78 }
+{ "_id" : "ZWL", "avgBalance" : 5792.17, "sumBalance" : 5792.17 }
 {
-	"_batch" : [
-		{
-			"_id" : "ETB",
-			"avgBalance" : 5436.11,
-			"sumBalance" : 5436.11
-		},
-		{
-			"_id" : "PEN",
-			"avgBalance" : 4661.235,
-			"sumBalance" : 18644.94
-		},
-		{
-			"_id" : "MKD",
-			"avgBalance" : 3835.05,
-			"sumBalance" : 3835.05
-		},
-		{
-			"_id" : "VEF",
-			"avgBalance" : 4166.64,
-			"sumBalance" : 8333.28
-		},
-		{
-			"_id" : "ARS",
-			"avgBalance" : 4648.4,
-			"sumBalance" : 23242
-		},
-		{
-			"_id" : "YER",
-			"avgBalance" : 4570.833333333333,
-			"sumBalance" : 13712.5
-		},
-		{
-			"_id" : "BGN",
-			"avgBalance" : 5300.22,
-			"sumBalance" : 21200.88
-		},
-		{
-			"_id" : "PHP",
-			"avgBalance" : 4941.928333333333,
-			"sumBalance" : 118606.28
-		},
-		{
-			"_id" : "XOF",
-			"avgBalance" : 5960.683333333333,
-			"sumBalance" : 17882.05
-		},
-		{
-			"_id" : "USD",
-			"avgBalance" : 4978.732,
-			"sumBalance" : 74680.98
-		},
-		{
-			"_id" : "GBP",
-			"avgBalance" : 6149.19,
-			"sumBalance" : 6149.19
-		},
-		{
-			"_id" : "AMD",
-			"avgBalance" : 4921.866,
-			"sumBalance" : 24609.33
-		},
-		{
-			"_id" : "VND",
-			"avgBalance" : 4520.0325,
-			"sumBalance" : 36160.26
-		},
-		{
-			"_id" : "THB",
-			"avgBalance" : 4604.392,
-			"sumBalance" : 23021.96
-		},
-		{
-			"_id" : "HNL",
-			"avgBalance" : 5504.863333333334,
-			"sumBalance" : 16514.59
-		},
-		{
-			"_id" : "VUV",
-			"avgBalance" : 6418.27,
-			"sumBalance" : 6418.27
-		},
-		{
-			"_id" : "DOP",
-			"avgBalance" : 5168.6849999999995,
-			"sumBalance" : 20674.739999999998
-		},
-		{
-			"_id" : "CAD",
-			"avgBalance" : 5306.872727272727,
-			"sumBalance" : 58375.6
-		},
-		{
-			"_id" : "NOK",
-			"avgBalance" : 4773.66,
-			"sumBalance" : 4773.66
-		},
-		{
-			"_id" : "PYG",
-			"avgBalance" : 4874.69,
-			"sumBalance" : 4874.69
-		},
-		{
-			"_id" : "MXN",
-			"avgBalance" : 5022.9,
-			"sumBalance" : 50229
-		},
-		{
-			"_id" : "NPR",
-			"avgBalance" : 5792.26,
-			"sumBalance" : 5792.26
-		},
-		{
-			"_id" : "MWK",
-			"avgBalance" : 3574.42,
-			"sumBalance" : 3574.42
-		},
-		{
-			"_id" : "NGN",
-			"avgBalance" : 4157.705,
-			"sumBalance" : 24946.23
-		},
-		{
-			"_id" : "CNY",
-			"avgBalance" : 4954.740842105263,
-			"sumBalance" : 470700.38
-		},
-		{
-			"_id" : "COP",
-			"avgBalance" : 4936.6825,
-			"sumBalance" : 19746.73
-		},
-		{
-			"_id" : "UAH",
-			"avgBalance" : 5058.9800000000005,
-			"sumBalance" : 40471.840000000004
-		},
-		{
-			"_id" : "GTQ",
-			"avgBalance" : 5806.3,
-			"sumBalance" : 5806.3
-		},
-		{
-			"_id" : "MGA",
-			"avgBalance" : 4853.663333333333,
-			"sumBalance" : 14560.99
-		},
-		{
-			"_id" : "BOB",
-			"avgBalance" : 5263.3,
-			"sumBalance" : 5263.3
-		},
-		{
-			"_id" : "IRR",
-			"avgBalance" : 4417.373333333333,
-			"sumBalance" : 26504.239999999998
-		},
-		{
-			"_id" : "CZK",
-			"avgBalance" : 4644.5525,
-			"sumBalance" : 37156.42
-		},
-		{
-			"_id" : "AFN",
-			"avgBalance" : 5585.163333333334,
-			"sumBalance" : 16755.49
-		},
-		{
-			"_id" : "NIO",
-			"avgBalance" : 4985.64,
-			"sumBalance" : 9971.28
-		},
-		{
-			"_id" : "ISK",
-			"avgBalance" : 4316.41,
-			"sumBalance" : 4316.41
-		},
-		{
-			"_id" : "IDR",
-			"avgBalance" : 4907.918030303031,
-			"sumBalance" : 323922.59
-		},
-		{
-			"_id" : "EUR",
-			"avgBalance" : 4901.8294,
-			"sumBalance" : 245091.47
-		},
-		{
-			"_id" : "CDF",
-			"avgBalance" : 6114.4,
-			"sumBalance" : 12228.8
-		},
-		{
-			"_id" : "TZS",
-			"avgBalance" : 3526.1850000000004,
-			"sumBalance" : 7052.370000000001
-		},
-		{
-			"_id" : "EGP",
-			"avgBalance" : 5579.3,
-			"sumBalance" : 5579.3
-		},
-		{
-			"_id" : "JPY",
-			"avgBalance" : 5078.7283333333335,
-			"sumBalance" : 60944.74
-		},
-		{
-			"_id" : "RUB",
-			"avgBalance" : 4989.547916666666,
-			"sumBalance" : 119749.15
-		},
-		{
-			"_id" : "SRD",
-			"avgBalance" : 5286.68,
-			"sumBalance" : 5286.68
-		},
-		{
-			"_id" : "ZMW",
-			"avgBalance" : 5569.56,
-			"sumBalance" : 5569.56
-		},
-		{
-			"_id" : "XAF",
-			"avgBalance" : 4698.22,
-			"sumBalance" : 14094.66
-		},
-		{
-			"_id" : "MNT",
-			"avgBalance" : 5428.9025,
-			"sumBalance" : 21715.61
-		},
-		{
-			"_id" : "SEK",
-			"avgBalance" : 5060.013571428572,
-			"sumBalance" : 70840.19
-		},
-		{
-			"_id" : "BRL",
-			"avgBalance" : 4512.001818181819,
-			"sumBalance" : 49632.020000000004
-		},
-		{
-			"_id" : "ZWL",
-			"avgBalance" : 5792.17,
-			"sumBalance" : 5792.17
-		},
-		{
-			"_id" : "PLN",
-			"avgBalance" : 5042.821111111111,
-			"sumBalance" : 90770.78
-		},
-		{
-			"_id" : "CUP",
-			"avgBalance" : 5005.78,
-			"sumBalance" : 15017.34
-		},
-		{
-			"_id" : "ZAR",
-			"avgBalance" : 3930.306666666667,
-			"sumBalance" : 11790.92
-		},
-		{
-			"_id" : "HRK",
-			"avgBalance" : 4870.964,
-			"sumBalance" : 24354.82
-		},
-		{
-			"_id" : "PKR",
-			"avgBalance" : 4734.5,
-			"sumBalance" : 18938
-		},
-		{
-			"_id" : "KYD",
-			"avgBalance" : 3760.89,
-			"sumBalance" : 3760.89
-		},
-		{
-			"_id" : "NZD",
-			"avgBalance" : 5328.46,
-			"sumBalance" : 5328.46
-		},
-		{
-			"_id" : "KZT",
-			"avgBalance" : 3788.95,
-			"sumBalance" : 3788.95
-		},
-		{
-			"_id" : "UZS",
-			"avgBalance" : 3573.03,
-			"sumBalance" : 3573.03
-		},
-		{
-			"_id" : "ILS",
-			"avgBalance" : 5431.83,
-			"sumBalance" : 16295.49
-		},
-		{
-			"_id" : "CLP",
-			"avgBalance" : 5252.2375,
-			"sumBalance" : 21008.95
-		},
-		{
-			"_id" : "BWP",
-			"avgBalance" : 4076.29,
-			"sumBalance" : 4076.29
-		},
-		{
-			"_id" : "RWF",
-			"avgBalance" : 4632.88,
-			"sumBalance" : 4632.88
-		},
-		{
-			"_id" : "TJS",
-			"avgBalance" : 4087.71,
-			"sumBalance" : 4087.71
-		},
-		{
-			"_id" : "KRW",
-			"avgBalance" : 6689.91,
-			"sumBalance" : 13379.82
-		},
-		{
-			"_id" : "MMK",
-			"avgBalance" : 4629.42,
-			"sumBalance" : 4629.42
-		},
-		{
-			"_id" : "RSD",
-			"avgBalance" : 4276.56,
-			"sumBalance" : 4276.56
-		},
-		{
-			"_id" : "IQD",
-			"avgBalance" : 4269.39,
-			"sumBalance" : 4269.39
-		},
-		{
-			"_id" : "BYR",
-			"avgBalance" : 5095.79,
-			"sumBalance" : 5095.79
-		},
-		{
-			"_id" : "XPF",
-			"avgBalance" : 4759.07,
-			"sumBalance" : 4759.07
-		},
-		{
-			"_id" : "LYD",
-			"avgBalance" : 4382.495,
-			"sumBalance" : 8764.99
-		},
-		{
-			"_id" : "MAD",
-			"avgBalance" : 3818.85,
-			"sumBalance" : 3818.85
-		},
-		{
-			"_id" : "ALL",
-			"avgBalance" : 3325.48,
-			"sumBalance" : 3325.48
-		},
-		{
-			"_id" : "MYR",
-			"avgBalance" : 4781.12,
-			"sumBalance" : 4781.12
-		}
-	],
-	"_useReadCommands" : true,
-	"_cursorid" : NumberLong(0),
-	"_batchSize" : undefined,
-	"_maxAwaitTimeMS" : undefined,
-	"_ns" : "nbd.people",
-	"_db" : nbd,
-	"_collName" : "people",
-	"_cursorHandle" : {
-		
-	},
-	"isClosed" : function () {
-    if (this._useReadCommands) {
-        return bsonWoCompare({_: this._cursorid}, {_: NumberLong(0)}) === 0;
-    }
-    return this._cursor.isClosed();
-},
-	"isExhausted" : function () {
-    return this.isClosed() && this.objsLeftInBatch() === 0;
-},
-	"close" : function () {
-    if (!this._useReadCommands) {
-        this._cursor.close();
-    } else if (bsonWoCompare({_: this._cursorid}, {_: NumberLong(0)}) !== 0) {
-        var killCursorCmd = {
-            killCursors: this._collName,
-            cursors: [this._cursorid],
-        };
-        var cmdRes = this._db.runCommand(killCursorCmd);
-        if (cmdRes.ok != 1) {
-            throw _getErrorWithCode(cmdRes, "killCursors command failed: " + tojson(cmdRes));
-        }
-
-        this._cursorHandle.zeroCursorId();
-        this._cursorid = NumberLong(0);
-    }
-},
-	"_runGetMoreCommand" : function () {
-    // Construct the getMore command.
-    var getMoreCmd = {getMore: this._cursorid, collection: this._collName};
-
-    if (this._batchSize) {
-        getMoreCmd["batchSize"] = this._batchSize;
-    }
-
-    // maxAwaitTimeMS is only supported when using read commands.
-    if (this._maxAwaitTimeMS) {
-        getMoreCmd.maxTimeMS = this._maxAwaitTimeMS;
-    }
-
-    // Deliver the getMore command, and check for errors in the response.
-    var cmdRes = this._db.runCommand(getMoreCmd);
-    if (cmdRes.ok != 1) {
-        throw _getErrorWithCode(cmdRes, "getMore command failed: " + tojson(cmdRes));
-    }
-
-    if (this._ns !== cmdRes.cursor.ns) {
-        throw Error("unexpected collection in getMore response: " + this._ns + " != " +
-                    cmdRes.cursor.ns);
-    }
-
-    if (!cmdRes.cursor.id.compare(NumberLong("0"))) {
-        this._cursorHandle.zeroCursorId();
-        this._cursorid = NumberLong("0");
-    } else if (this._cursorid.compare(cmdRes.cursor.id)) {
-        throw Error("unexpected cursor id: " + this._cursorid.toString() + " != " +
-                    cmdRes.cursor.id.toString());
-    }
-
-    // Successfully retrieved the next batch.
-    this._batch = cmdRes.cursor.nextBatch.reverse();
-},
-	"_hasNextUsingCommands" : function () {
-    assert(this._useReadCommands);
-
-    if (!this._batch.length) {
-        if (!this._cursorid.compare(NumberLong("0"))) {
-            return false;
-        }
-
-        this._runGetMoreCommand();
-    }
-
-    return this._batch.length > 0;
-},
-	"hasNext" : function () {
-    if (this._useReadCommands) {
-        return this._hasNextUsingCommands();
-    }
-
-    return this._batch.length || this._cursor.hasNext();
-},
-	"next" : function () {
-    if (this._batch.length) {
-        // $err wouldn't be in _firstBatch since ok was true.
-        return this._batch.pop();
-    } else if (this._useReadCommands) {
-        // Have to call hasNext() here, as this is where we may issue a getMore in order to retrieve
-        // the next batch of results.
-        if (!this.hasNext())
-            throw Error("error hasNext: false");
-        return this._batch.pop();
-    } else {
-        if (!this._cursor.hasNext())
-            throw Error("error hasNext: false");
-
-        var ret = this._cursor.next();
-        if (ret.$err)
-            throw _getErrorWithCode(ret, "error: " + tojson(ret));
-        return ret;
-    }
-},
-	"objsLeftInBatch" : function () {
-    if (this._useReadCommands) {
-        return this._batch.length;
-    } else if (this._batch.length) {
-        return this._batch.length;
-    } else {
-        return this._cursor.objsLeftInBatch();
-    }
-},
-	"help" : function () {
-    // This is the same as the "Cursor Methods" section of DBQuery.help().
-    print("\nCursor methods");
-    print("\t.toArray() - iterates through docs and returns an array of the results");
-    print("\t.forEach( func )");
-    print("\t.map( func )");
-    print("\t.hasNext()");
-    print("\t.next()");
-    print(
-        "\t.objsLeftInBatch() - returns count of docs left in current batch (when exhausted, a new getMore will be issued)");
-    print("\t.itcount() - iterates through documents and counts them");
-    print("\t.pretty() - pretty print each document, possibly over multiple lines");
-    print("\t.close()");
-},
-	"toArray" : function () {
-    if (this._arr)
-        return this._arr;
-
-    var a = [];
-    while (this.hasNext())
-        a.push(this.next());
-    this._arr = a;
-    return a;
-},
-	"forEach" : function (func) {
-    while (this.hasNext())
-        func(this.next());
-},
-	"map" : function (func) {
-    var a = [];
-    while (this.hasNext())
-        a.push(func(this.next()));
-    return a;
-},
-	"itcount" : function () {
-    var num = 0;
-
-    // Track how many bytes we've used this cursor to iterate iterated.  This function can be called
-    // with some very large cursors.  SpiderMonkey appears happy to allow these objects to
-    // accumulate, so regular gc() avoids an overly large memory footprint.
-    //
-    // TODO: migrate this function into c++
-    var bytesSinceGC = 0;
-
-    while (this.hasNext()) {
-        num++;
-        var nextDoc = this.next();
-        bytesSinceGC += Object.bsonsize(nextDoc);
-
-        // Garbage collect every 10 MB.
-        if (bytesSinceGC > (10 * 1024 * 1024)) {
-            bytesSinceGC = 0;
-            gc();
-        }
-    }
-    return num;
-},
-	"shellPrint" : function () {
-    try {
-        var start = new Date().getTime();
-        var n = 0;
-        while (this.hasNext() && n < DBQuery.shellBatchSize) {
-            var s = this._prettyShell ? tojson(this.next()) : tojson(this.next(), "", true);
-            print(s);
-            n++;
-        }
-        if (typeof _verboseShell !== 'undefined' && _verboseShell) {
-            var time = new Date().getTime() - start;
-            print("Fetched " + n + " record(s) in " + time + "ms");
-        }
-        if (this.hasNext()) {
-            print("Type \"it\" for more");
-            ___it___ = this;
-        } else {
-            ___it___ = null;
-        }
-    } catch (e) {
-        print(e);
-    }
-
-},
-	"pretty" : function () {
-    this._prettyShell = true;
-    return this;
+	"_id" : "BRL",
+	"avgBalance" : 4512.001818181819,
+	"sumBalance" : 49632.020000000004
 }
+{ "_id" : "SEK", "avgBalance" : 5060.013571428572, "sumBalance" : 70840.19 }
+{ "_id" : "MNT", "avgBalance" : 5428.9025, "sumBalance" : 21715.61 }
+{ "_id" : "XAF", "avgBalance" : 4698.22, "sumBalance" : 14094.66 }
+{ "_id" : "ZMW", "avgBalance" : 5569.56, "sumBalance" : 5569.56 }
+{ "_id" : "SRD", "avgBalance" : 5286.68, "sumBalance" : 5286.68 }
+{
+	"_id" : "RUB",
+	"avgBalance" : 4989.547916666666,
+	"sumBalance" : 119749.15
 }
+{
+	"_id" : "JPY",
+	"avgBalance" : 5078.7283333333335,
+	"sumBalance" : 60944.74
+}
+{ "_id" : "EGP", "avgBalance" : 5579.3, "sumBalance" : 5579.3 }
+{
+	"_id" : "TZS",
+	"avgBalance" : 3526.1850000000004,
+	"sumBalance" : 7052.370000000001
+}
+{ "_id" : "CDF", "avgBalance" : 6114.4, "sumBalance" : 12228.8 }
+{ "_id" : "EUR", "avgBalance" : 4901.8294, "sumBalance" : 245091.47 }
+{
+	"_id" : "IDR",
+	"avgBalance" : 4907.918030303031,
+	"sumBalance" : 323922.59
+}
+{ "_id" : "ISK", "avgBalance" : 4316.41, "sumBalance" : 4316.41 }
+{ "_id" : "NIO", "avgBalance" : 4985.64, "sumBalance" : 9971.28 }
+{ "_id" : "AFN", "avgBalance" : 5585.163333333334, "sumBalance" : 16755.49 }
+{ "_id" : "CZK", "avgBalance" : 4644.5525, "sumBalance" : 37156.42 }
+{
+	"_id" : "IRR",
+	"avgBalance" : 4417.373333333333,
+	"sumBalance" : 26504.239999999998
+}
+{ "_id" : "BOB", "avgBalance" : 5263.3, "sumBalance" : 5263.3 }
+{ "_id" : "MGA", "avgBalance" : 4853.663333333333, "sumBalance" : 14560.99 }
+{ "_id" : "GTQ", "avgBalance" : 5806.3, "sumBalance" : 5806.3 }
+{
+	"_id" : "UAH",
+	"avgBalance" : 5058.9800000000005,
+	"sumBalance" : 40471.840000000004
+}
+{ "_id" : "COP", "avgBalance" : 4936.6825, "sumBalance" : 19746.73 }
+{
+	"_id" : "CNY",
+	"avgBalance" : 4954.740842105263,
+	"sumBalance" : 470700.38
+}
+{ "_id" : "NGN", "avgBalance" : 4157.705, "sumBalance" : 24946.23 }
+{ "_id" : "MWK", "avgBalance" : 3574.42, "sumBalance" : 3574.42 }
+{ "_id" : "NPR", "avgBalance" : 5792.26, "sumBalance" : 5792.26 }
+{ "_id" : "MXN", "avgBalance" : 5022.9, "sumBalance" : 50229 }
+{ "_id" : "PYG", "avgBalance" : 4874.69, "sumBalance" : 4874.69 }
+{ "_id" : "NOK", "avgBalance" : 4773.66, "sumBalance" : 4773.66 }
+{ "_id" : "CAD", "avgBalance" : 5306.872727272727, "sumBalance" : 58375.6 }
+{
+	"_id" : "DOP",
+	"avgBalance" : 5168.6849999999995,
+	"sumBalance" : 20674.739999999998
+}
+{ "_id" : "VUV", "avgBalance" : 6418.27, "sumBalance" : 6418.27 }
+{ "_id" : "HNL", "avgBalance" : 5504.863333333334, "sumBalance" : 16514.59 }
+{ "_id" : "THB", "avgBalance" : 4604.392, "sumBalance" : 23021.96 }
+{ "_id" : "VND", "avgBalance" : 4520.0325, "sumBalance" : 36160.26 }
+{ "_id" : "AMD", "avgBalance" : 4921.866, "sumBalance" : 24609.33 }
+{ "_id" : "GBP", "avgBalance" : 6149.19, "sumBalance" : 6149.19 }
+{ "_id" : "USD", "avgBalance" : 4978.732, "sumBalance" : 74680.98 }
+{ "_id" : "XOF", "avgBalance" : 5960.683333333333, "sumBalance" : 17882.05 }
+{
+	"_id" : "PHP",
+	"avgBalance" : 4941.928333333333,
+	"sumBalance" : 118606.28
+}
+{ "_id" : "BGN", "avgBalance" : 5300.22, "sumBalance" : 21200.88 }
+{ "_id" : "YER", "avgBalance" : 4570.833333333333, "sumBalance" : 13712.5 }
+{ "_id" : "ARS", "avgBalance" : 4648.4, "sumBalance" : 23242 }
+{ "_id" : "VEF", "avgBalance" : 4166.64, "sumBalance" : 8333.28 }
+{ "_id" : "MKD", "avgBalance" : 3835.05, "sumBalance" : 3835.05 }
+{ "_id" : "PEN", "avgBalance" : 4661.235, "sumBalance" : 18644.94 }
+{ "_id" : "ETB", "avgBalance" : 5436.11, "sumBalance" : 5436.11 }
