@@ -24,6 +24,4 @@ function reduceFunc(key, value)
 
 db.people.mapReduce(mapFunc, reduceFunc, { out : 'query_14' })
 
-var myCursor = db.query_14.find({});
-
-myCursor.forEach(printjson);
+printjson(db.query_14.find({}).toArray());

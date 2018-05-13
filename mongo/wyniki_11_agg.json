@@ -1,9 +1,15 @@
 MongoDB shell version v3.6.4
 connecting to: mongodb://127.0.0.1:27017/nbd
 MongoDB server version: 3.6.4
-{
-	"_id" : "Female",
-	"avgH" : 166.81260913705583,
-	"avgW" : 70.11331573604062
-}
-{ "_id" : "Male", "avgH" : 166.7391903896628, "avgW" : 70.0117827579245 }
+[
+	{
+		"_id" : "Female",
+		"avgH" : 166.81260913705583,
+		"avgW" : 70.11331573604062
+	},
+	{
+		"_id" : "Male",
+		"avgH" : 166.7391903896628,
+		"avgW" : 70.0117827579245
+	}
+]

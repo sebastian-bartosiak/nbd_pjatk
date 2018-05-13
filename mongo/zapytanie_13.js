@@ -28,6 +28,4 @@ function finalizeFunction(key, reducedValue)
 }
 db.people.mapReduce(mapFunc, reduceFunc, { out : 'query_13', finalize: finalizeFunction })
 
-var myCursor = db.query_13.find({});
-
-myCursor.forEach(printjson);
+printjson(db.query_13.find({}).toArray());
