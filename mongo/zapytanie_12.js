@@ -12,4 +12,8 @@ function reduceFunc(key, value)
     var array = value.filter(x => !isNaN(x));
     return Array.sum(array)
 }
-db.people.mapReduce(mapFunc, reduceFunc, { out : 'balance_sum' })
+db.people.mapReduce(mapFunc, reduceFunc, { out : 'query_12' })
+
+var myCursor = db.query_12.find({});
+
+myCursor.forEach(printjson);

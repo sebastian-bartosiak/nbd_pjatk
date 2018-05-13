@@ -26,4 +26,8 @@ function finalizeFunction(key, reducedValue)
 {
     return reducedValue.jobs;
 }
-db.people.mapReduce(mapFunc, reduceFunc, { out : 'jobs_list', finalize: finalizeFunction })
+db.people.mapReduce(mapFunc, reduceFunc, { out : 'query_13', finalize: finalizeFunction })
+
+var myCursor = db.query_13.find({});
+
+myCursor.forEach(printjson);

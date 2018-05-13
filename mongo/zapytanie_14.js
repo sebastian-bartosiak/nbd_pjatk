@@ -22,4 +22,8 @@ function reduceFunc(key, value)
     return result;
 }
 
-db.people.mapReduce(mapFunc, reduceFunc, { out : 'bmi' })
+db.people.mapReduce(mapFunc, reduceFunc, { out : 'query_14' })
+
+var myCursor = db.query_14.find({});
+
+myCursor.forEach(printjson);

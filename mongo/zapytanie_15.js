@@ -21,4 +21,8 @@ function reduceFunc(key, value)
     return result;
 }
 
-db.people.mapReduce(mapFunc, reduceFunc, { out : 'balance_sum_polish_girls', query : {nationality:'Poland', sex: 'Female'} })
+db.people.mapReduce(mapFunc, reduceFunc, { out : 'query_15', query : {nationality:'Poland', sex: 'Female'} })
+
+var myCursor = db.query_15.find({});
+
+myCursor.forEach(printjson);

@@ -18,4 +18,8 @@ function reduceFunc(key, value)
             }
     return p;
 }
-db.people.mapReduce(mapFunc, reduceFunc, { out : 'map_reduce' })
+db.people.mapReduce(mapFunc, reduceFunc, { out : 'query_11' })
+
+var myCursor = db.query_11.find({});
+
+myCursor.forEach(printjson);

@@ -1,7 +1,7 @@
-db.people.aggregate(
+printjson(db.people.aggregate(
     [
         { $unwind : "$credit" },
         { $match : { sex : "Female", nationality : "Poland"}},
         {$group : { _id : "$credit.currency", avgBalance : {$avg : "$credit.balanceFloat"}, sumBalance : {$sum : "$credit.balanceFloat"}}}
     ]
-)
+))
