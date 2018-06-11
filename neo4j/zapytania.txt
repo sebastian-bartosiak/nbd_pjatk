@@ -1,0 +1,137 @@
+1. 
+MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(hugoWeavingMovie) 
+RETURN hugo,hugoWeavingMovie
+
+2.
+MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(hugoWeavingMovie)<-[:DIRECTED]-(directors) 
+RETURN directors
+
+3.
+MATCH (Person {name:"Hugo Weaving"})-[:ACTED_IN]->(a)<-[:ACTED_IN]-(hugoWeavingCollegues) 
+RETURN DISTINCT hugoWeavingCollegues
+
+4.
+MATCH (actors:Person)-[:ACTED_IN]->(films)
+RETURN actors.name, count(films)
+
+5.
+MATCH (person:Person)-[:DIRECTED]->(film)<-[:WROTE]-(person) 
+RETURN person.name, film.title
+
+6.
+MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(film)<-[:ACTED_IN]-(keanu:Person {name: "Keanu Reeves"}) 
+RETURN film.title
+
+7.
+MATCH (hugo:Person {name: "Hugo Weaving"}) 
+CREATE (CapitanAmerica:Movie {title:'Captain America: The First Avenger', released:2011, tagline:'The first America'})
+CREATE (ChrisEvans :Person {name:'Chris Evans', born:1981})
+CREATE (HayleyAtwell :Person {name:'Hayley Atwell', born:1982})
+CREATE (SebastianStan :Person {name:'Sebastian Stan', born:1982})
+CREATE (TommyLeeJones :Person {name:'Tommy Lee Jones', born:1946})
+CREATE (DominicCooper :Person {name:'Dominic Cooper', born:1978})
+CREATE (RichardArmitage :Person {name:'Richard Armitage', born:1971})
+CREATE (StanleyTucci :Person {name:'Stanley Tucci', born:1960})
+CREATE (SamuelL :Person {name:'Jackson Samuel L. Jackson', born:1948})
+CREATE (TobyJones :Person {name:'Toby Jones', born:1966})
+CREATE (NealMcDonough :Person {name:'Neal McDonough', born:1966})
+CREATE (DerekLuke :Person {name:'Derek Luke', born:1974})
+CREATE (KennethChoi :Person {name:'Kenneth Choi', born:1971})
+CREATE (JJFeild :Person {name:'JJ Feild', born:1978})
+CREATE (ChristopherMarkus :Person {name:'Christopher Markus', born:1968})
+CREATE (StephenMcFeely :Person {name:'Stephen McFeely', born:1974})
+CREATE (JoeJohnston :Person {name:'Joe Johnston', born:1950})
+
+CREATE
+    (hugo)-[:ACTED_IN {roles:['Johann Schmidt, Red Skull']}]->(CapitanAmerica),
+    (ChrisEvans)-[:ACTED_IN {roles:['Captain America']}]->(CapitanAmerica),
+    (HayleyAtwell)-[:ACTED_IN {roles:['Peggy Carter']}]->(CapitanAmerica),
+    (SebastianStan)-[:ACTED_IN {roles:['James Buchanan Bucky Barnes']}]->(CapitanAmerica),
+    (TommyLeeJones)-[:ACTED_IN {roles:['Colonel Chester Phillips']}]->(CapitanAmerica),
+    (DominicCooper)-[:ACTED_IN {roles:['Howard Stark']}]->(CapitanAmerica),
+    (RichardArmitage)-[:ACTED_IN {roles:['Heinz Kruger']}]->(CapitanAmerica),
+    (StanleyTucci)-[:ACTED_IN {roles:['Dr. Abraham Erskine']}]->(CapitanAmerica),
+    (SamuelL)-[:ACTED_IN {roles:['Nick Fury']}]->(CapitanAmerica),
+    (TobyJones)-[:ACTED_IN {roles:['Dr. Arnim Zola']}]->(CapitanAmerica),
+    (NealMcDonough)-[:ACTED_IN {roles:['Timothy Dum Dum Dugan']}]->(CapitanAmerica),
+    (DerekLuke)-[:ACTED_IN {roles:['Gabe Jones']}]->(CapitanAmerica),
+    (KennethChoi)-[:ACTED_IN {roles:['Jim Morita']}]->(CapitanAmerica),
+    (JJFeild)-[:ACTED_IN {roles:['James Montgomery Falsworth']}]->(CapitanAmerica),
+    (ChristopherMarkus)-[:WROTE]->(CapitanAmerica),
+    (StephenMcFeely)-[:WROTE]->(CapitanAmerica),
+    (JoeJohnston)-[:DIRECTED]->(CapitanAmerica)
+    
+MATCH (people:Person)-[relatedTo]-(:Movie {title: "Captain America: The First Avenger"}) RETURN people.name, Type(relatedTo), relatedTo
+
+8.
+MATCH ({name:"Darjeeling"})-[x*]->({name:"Sandakphu"}) 
+RETURN x
+
+9.
+MATCH x=allShortestPaths((from{name:"Darjeeling"})-[*]->(to{name:"Sandakphu"})) 
+RETURN x
+
+10.
+MATCH (from{name:"Darjeeling"})-[*{winter:"true"}]->(to{name:"Sandakphu"}), x = allShortestPaths((from)-[*]-(to)) 
+RETURN x
+
+11.
+MATCH x = (from{name:"Darjeeling"})-[*]->(to{name:"Sandakphu"}) 
+RETURN x, reduce(i=0, n IN relationships(x) | i+n.distance) AS totalDist 
+ORDER BY totalDist
+
+12.
+MATCH (from{name:"Darjeeling"})-[r:twowheeler]-(to)
+WHERE r.summer = "true"
+RETURN from,r,to
+
+13.
+MATCH (from{name:"Darjeeling"})-[r:twowheeler]-(to)
+WHERE r.summer = "true"
+RETURN to
+
+14.
+MATCH (f:Flight)-[:ORIGIN]->(a) 
+RETURN a.name, count(f) 
+ORDER BY count(f)
+
+15.
+MATCH path= ((lax:Airport{name:"LAX"})-[f:CHEAPEST_FLIGHT*..2]->(b:Airport))
+WITH lax, LENGTH(path) AS length, EXTRACT(p in NODES(path) | p.name) AS fullPath, b, REDUCE(TotalPrice=0, n IN f | TotalPrice + n.price) as TotalPrice
+WHERE TotalPrice < 3000
+RETURN DISTINCT b
+
+16.
+MATCH path= ((lax:Airport{name:"LAX"})-[f:CHEAPEST_FLIGHT*]->(b:Airport{name:"DAY"}))
+WITH lax, LENGTH(path) AS length, EXTRACT(p in NODES(path) | p.name) AS fullPath, b, REDUCE(TotalPrice=0, n IN f | TotalPrice + n.price) as TotalPrice
+RETURN lax, fullPath, b, TotalPrice
+ORDER BY TotalPrice
+
+17.
+MATCH path= ((lax:Airport{name:"LAX"})-[f:CHEAPEST_FLIGHT*]->(b:Airport{name:"DAY"}))
+WITH lax, LENGTH(path) AS length, EXTRACT(p in NODES(path) | p.name) AS fullPath, b, REDUCE(TotalPrice=0, n IN f | TotalPrice + n.price) as TotalPrice
+RETURN lax, fullPath, b, TotalPrice
+ORDER BY TotalPrice
+LIMIT 1
+
+18.
+MATCH path= ((lax:Airport{name:"LAX"})-[f:CHEAPEST_FLIGHT*..3{class:"business"}]->(b:Airport{name:"DAY"}))
+WITH lax, LENGTH(path) AS length, EXTRACT(p in NODES(path) | p.name) AS fullPath, b, REDUCE(TotalPrice=0, n IN f | TotalPrice + n.price) as TotalPrice
+RETURN lax, fullPath, b, TotalPrice
+ORDER BY TotalPrice
+LIMIT 1
+
+19.
+MATCH (a:Airport)-[:DESTINATION|:ORIGIN]-(f:Flight)
+RETURN f.airline, count(Distinct a) AS Cities
+ORDER BY Cities
+
+20.
+MATCH path= ((a:Airport)-[f:CHEAPEST_FLIGHT*..2]->(b:Airport))
+WITH path,a,f,b
+WHERE ALL(n1 IN nodes(path) WHERE size(filter(n2 IN nodes(path) WHERE n2 = n1))=1)
+WITH a, LENGTH(path) AS length, EXTRACT(p in NODES(path) | p.name) AS fullPath, b, REDUCE(TotalPrice=0, n IN f | TotalPrice + n.price) as TotalPrice
+WHERE length = 2
+RETURN a, fullPath, b, TotalPrice, length
+ORDER BY TotalPrice
+LIMIT 1
