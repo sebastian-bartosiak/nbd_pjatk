@@ -1,0 +1,10 @@
+Program for interacting with RIAK
+Adding record
+Reading record
+{"firstName": "Piotr", "lastName": "Piotrowski", "balance": 1000, "weight": 81}
+Amending record
+Reading record
+{"firstName": "Piotr", "lastName": "Piotrowski", "balance": 5555, "weight": 33}
+Removing record
+Trying read record
+not found

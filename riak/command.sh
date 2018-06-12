@@ -1,0 +1,1 @@
+curl -i -XDELETE http://172.17.0.2:8098/buckets/s14415/keys/B1zF0qLvSmzhGZZ810HGi7RsNXj

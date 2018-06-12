@@ -1,0 +1,41 @@
+1.1
+curl -i -XPUT -H "Content-Type:application/json" -d '{"firstName": "Piotr", "lastName": "Piotrowski", "balance": 1000, "weight": 80}' http://172.17.0.2:8098/buckets/s14415/keys/Piotrowski
+
+1.2
+curl -i -XPUT -H "Content-Type:application/json" -d '{"firstName": "Pawel", "lastName": "Pawelski", "balance": 1000, "weight": 80}' http://172.17.0.2:8098/buckets/s14415/keys/Pawelski
+
+1.3
+curl -i -XPUT -H "Content-Type:application/json" -d '{"firstName": "Marcin", "lastName": "Marcinski", "balance": 1000, "weight": 80}' http://172.17.0.2:8098/buckets/s14415/keys/Marcinski
+
+1.4
+curl -i -XPUT -H "Content-Type:application/json" -d '{"firstName": "Krzysztof", "lastName": "Kowalczyk", "balance": 1000, "weight": 80}' http://172.17.0.2:8098/buckets/s14415/keys/Kowalczyk
+
+1.5
+curl -i -XPUT -H "Content-Type:application/json" -d '{"firstName": "Adam", "lastName": "Adamski", "balance": 1000, "weight": 80}' http://172.17.0.2:8098/buckets/s14415/keys/Adamski
+
+2.
+curl -i http://172.17.0.2:8098/buckets/s14889/keys/Kowalczyk
+
+3.
+curl -i -XPUT -H "Content-Type:application/json" -d '{"firstName": "Piotr", "lastName": "Piotrowski", "balance": 1000, "weight": 80, "dob":"1900-12-12"}' http://172.17.0.2:8098/buckets/s14415/keys/Piotrowski
+
+4.
+curl -i -XPUT -H "Content-Type:application/json" -d '{"firstName": "Pawel", "lastName": "Pawelski", "balance": 1000}' http://172.17.0.2:8098/buckets/s14415/keys/Pawelski
+
+5.
+curl -i -XPUT -H "Content-Type:application/json" -d '{"firstName": "Marcin", "lastName": "Marcinski", "balance": 12, "weight": 80}' http://172.17.0.2:8098/buckets/s14415/keys/Marcinski
+
+6.
+curl -i -XDELETE http://172.17.0.2:8098/buckets/s14415/keys/Adamski
+
+7.
+curl -i http://172.17.0.2:8098/buckets/s14889/keys/TESTTESTETETE
+
+8.
+curl -i -XPOST -H "Content-Type:application/json" -d '{"dummyprop":"dummydata"}' http://172.17.0.2:8098/buckets/s14415/keys
+
+9.
+curl -i http://172.17.0.2:8098/buckets/s14415/keys/B1zF0qLvSmzhGZZ810HGi7RsNXj
+
+10.
+curl -i -XDELETE http://172.17.0.2:8098/buckets/s14415/keys/B1zF0qLvSmzhGZZ810HGi7RsNXj
